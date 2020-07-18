@@ -32,6 +32,15 @@ TextureImporter:
   - first:
       213: 2249190401164602793
     second: Platform
+  - first:
+      213: -1973256380358736724
+    second: Item1
+  - first:
+      213: 6028013261562282066
+    second: Item2
+  - first:
+      213: 6123027231737168646
+    second: Item3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -370,6 +379,69 @@ TextureImporter:
       bones: []
       spriteID: 9ad62adc0cab63f10800000000000000
       internalID: 2249190401164602793
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 1
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca4c1fdd6c59d94e0800000000000000
+      internalID: -1973256380358736724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item2
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 1
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25083c4af1ec7a350800000000000000
+      internalID: 6028013261562282066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Item3
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 1
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603ccb973dc59f450800000000000000
+      internalID: 6123027231737168646
       vertices: []
       indices: 
       edges: []
