@@ -5,10 +5,14 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float playerSpeed;
+    public ParticleSystem goalParticles;
+    public CameraShake camShake;
 
     Rigidbody2D rb;
     Animator anim;
     float damage = 1f;
+    bool canMove = true;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -17,6 +21,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+            canMove = true;
+        if (!canMove)
+            return;
+
         float h = Input.GetAxisRaw("Horizontal") * damage;
         float v = Input.GetAxisRaw("Vertical") * damage;
 
@@ -37,6 +46,27 @@ public class PlayerMovement : MonoBehaviour
         {
             print("I am not throwing away my shot");
             damage = -1f;
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Goal"))
+        {
+            print("He wrote the other FIFTY ONE");
+            print("OUR BOUNDS ARE THIS CLOSE: " + (collision.bounds.center - GetComponent<BoxCollider2D>().bounds.center));
+            print("OUR BOUNDS ARE THIS CLOSE: " + (collision.transform.position - transform.position));
+
+            if(Vector3.Magnitude(collision.transform.position - transform.position) < 0.01f)
+            {
+                if (!goalParticles.isPlaying)
+                {
+                    goalParticles.Play();
+                    camShake.shakeDuration = 0.5f;
+                    canMove = false;
+                    anim.SetInteger("Walk", 0);
+                }
+            }
         }
     }
 }
