@@ -45,11 +45,10 @@ public class UIController : MonoBehaviour
     public void Oops() => StartCoroutine(SelfDestruct());
     IEnumerator SelfDestruct()
     {
-        print("BIG OOPS");
         if (selfdestruct == 0)
         {
             Application.Quit();
-            StopCoroutine(SelfDestruct());
+            yield return null;
             print("DEAD");
         }
 

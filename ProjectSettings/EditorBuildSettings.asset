@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_todogj/Scenes/Testing.unity
-    guid: 7f0d3aac6ed527143be2e35de0f8b841
+    path: Assets/_todogj/Scenes/Game.unity
+    guid: 6cf321e431336384da2ea6a34c87fcf7
   m_configObjects: {}
