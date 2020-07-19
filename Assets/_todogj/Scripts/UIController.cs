@@ -43,6 +43,13 @@ public class UIController : MonoBehaviour
     }
 
     public void Oops() => StartCoroutine(SelfDestruct());
+    public void YouWon() => StartCoroutine(Winning());
+
+    IEnumerator Winning()
+    {
+        yield return null;
+    }
+
     IEnumerator SelfDestruct()
     {
         if (selfdestruct == 0)

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -667,6 +667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   volumeProfile: {fileID: 0}
   chromaticProperty: {fileID: 0}
+  depthProperty: {fileID: 0}
   downSpeed: 0.35
 --- !u!1 &259766258
 GameObject:
@@ -1903,7 +1904,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameStarted: 0
-  eraseProgress: 1
+  eraseProgress: 0
   timer: 0
   playerTransform: {fileID: 446512533}
   cueController: {fileID: 238040837}
@@ -1919,6 +1920,9 @@ MonoBehaviour:
   audioSources: []
   winClip: {fileID: 8300000, guid: a329b4fd9d3b91f4aa0a2fb1bc22a8cb, type: 3}
   gameOverClip: {fileID: 8300000, guid: 8453d3e3dc0426444b73ff8ee3543f1d, type: 3}
+  game: {fileID: 24500006, guid: 253dde108f9433e4086c3e36de28c7b2, type: 2}
+  gameOver: {fileID: -106077366590219383, guid: 253dde108f9433e4086c3e36de28c7b2,
+    type: 2}
 --- !u!82 &1134729563
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1928,7 +1932,8 @@ AudioSource:
   m_GameObject: {fileID: 1134729560}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 253dde108f9433e4086c3e36de28c7b2,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: eba1522ad84046e4b8c1fb5645013d9d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.8
@@ -2324,7 +2329,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title
+  m_text: boii-d
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a1441ebccd9b8324a8c69ed27e499b74, type: 2}
   m_sharedMaterial: {fileID: 387276098307974748, guid: a1441ebccd9b8324a8c69ed27e499b74,
@@ -2359,9 +2364,9 @@ MonoBehaviour:
   m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 8
   m_textAlignment: 516
-  m_characterSpacing: 0
+  m_characterSpacing: 4.4
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2394,10 +2399,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 1299066632}
-    characterCount: 10
+    characterCount: 6
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 1
     linkCount: 0
     lineCount: 1
     pageCount: 1

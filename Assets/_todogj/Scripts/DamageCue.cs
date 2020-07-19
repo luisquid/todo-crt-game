@@ -1,12 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Rendering.Universal;
 public class DamageCue : MonoBehaviour
 {
     public UnityEngine.Rendering.VolumeProfile volumeProfile;
 
-    public UnityEngine.Rendering.Universal.ChromaticAberration chromaticProperty;
+    public ChromaticAberration chromaticProperty;
+    public DepthOfField depthProperty;
 
     public float downSpeed;
 
@@ -19,6 +20,13 @@ public class DamageCue : MonoBehaviour
         if (!volumeProfile) throw new System.NullReferenceException(nameof(UnityEngine.Rendering.VolumeProfile));
 
         if (!volumeProfile.TryGet(out chromaticProperty)) throw new System.NullReferenceException(nameof(chromaticProperty));
+        if (!volumeProfile.TryGet(out depthProperty)) throw new System.NullReferenceException(nameof(depthProperty));
+    }
+
+    public void AddDepth()
+    {
+        DepthOfFieldModeParameter test = new DepthOfFieldModeParameter(DepthOfFieldMode.Gaussian);
+        depthProperty.mode.overrideState = true;
     }
 
     public void AddChromatic(float _value)

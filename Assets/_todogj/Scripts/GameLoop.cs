@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 
 public class GameLoop : MonoBehaviour
 {
@@ -19,7 +20,8 @@ public class GameLoop : MonoBehaviour
     public AudioSource[] audioSources;
     public AudioClip winClip;
     public AudioClip gameOverClip;
-
+    public AudioMixerSnapshot game;
+    public AudioMixerSnapshot gameOver;
     public void ClearLevels()
     {
         for(int i = 0; i < levels.Count; i++)
@@ -34,7 +36,10 @@ public class GameLoop : MonoBehaviour
         isWinning = false;
         
         if (levelIndex >= levels.Count)
-            uiController.Oops();
+        {
+            //uiController.Oops();
+            GoToEnding();
+        }
         else
         {
             ClearLevels();
@@ -84,6 +89,10 @@ public class GameLoop : MonoBehaviour
     public void GoToEnding()
     {
         print("YOU FIGURED IT OUT");
+        PlayerPrefs.SetInt("LEVEL", 0);
+        audioSources[0].volume = 0.4f;
+        gameOver.TransitionTo(0.1f);
+        cueController.AddDepth();
         StartCoroutine(SceneController.IE_LoadEnvironment());
     }
 

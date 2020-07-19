@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private static string environmentSceneIndex = "Environment";
+    private static string environmentSceneIndex = "Environment_02";
     
     private readonly int gameSceneIndex = 0;
 
