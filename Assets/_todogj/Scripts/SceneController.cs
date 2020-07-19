@@ -7,25 +7,15 @@ using UnityEngine.SceneManagement;
 public class SceneController : MonoBehaviour
 {
     private readonly string environmentSceneIndex = "Environment";
+    
+    private readonly int gameSceneIndex = 0;
 
-    public bool loadTest = false;
 
-    #region TEST
-    private void Start()
+    public void LoadGameScene()
     {
-        if (loadTest)
-        {
-            StartCoroutine(IE_LoadTest());
-        }
-    }
-
-    private IEnumerator IE_LoadTest()
-    {
-        yield return new WaitForSeconds(15);
-        LoadEnvironment();
+        SceneManager.LoadScene(gameSceneIndex);
     }
     
-    #endregion
    
 
     public void LoadEnvironment()
