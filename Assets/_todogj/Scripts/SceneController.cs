@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
-    private readonly string environmentSceneIndex = "Environment";
+    private static string environmentSceneIndex = "Environment";
     
     private readonly int gameSceneIndex = 0;
 
@@ -16,16 +16,10 @@ public class SceneController : MonoBehaviour
         SceneManager.LoadScene(gameSceneIndex);
     }
     
-   
-
-    public void LoadEnvironment()
-    {
-        StartCoroutine(IE_LoadAdditive(environmentSceneIndex));
-    }
     
-    private IEnumerator IE_LoadAdditive(string sceneIndex)
+    public static IEnumerator IE_LoadEnvironment()
     {
-        AsyncOperation asyncOp = SceneManager.LoadSceneAsync(sceneIndex, LoadSceneMode.Additive);
+        AsyncOperation asyncOp = SceneManager.LoadSceneAsync(environmentSceneIndex, LoadSceneMode.Additive);
 
         while (!asyncOp.isDone)
         {

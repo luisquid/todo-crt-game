@@ -84,6 +84,7 @@ public class GameLoop : MonoBehaviour
     public void GoToEnding()
     {
         print("YOU FIGURED IT OUT");
+        StartCoroutine(SceneController.IE_LoadEnvironment());
     }
 
     // Start is called before the first frame update
