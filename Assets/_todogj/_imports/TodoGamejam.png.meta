@@ -41,6 +41,18 @@ TextureImporter:
   - first:
       213: 6123027231737168646
     second: Item3
+  - first:
+      213: -224552924345505264
+    second: PlayerWhite1
+  - first:
+      213: 1664981318439855935
+    second: PlayerWhite2
+  - first:
+      213: -8090462500085344427
+    second: PlayerWhite3
+  - first:
+      213: -8840393186606770165
+    second: PlayerWhite4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -392,7 +404,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -413,7 +425,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -434,7 +446,7 @@ TextureImporter:
         width: 7
         height: 6
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -442,6 +454,90 @@ TextureImporter:
       bones: []
       spriteID: 603ccb973dc59f450800000000000000
       internalID: 6123027231737168646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWhite1
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 8
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01a6c171e4a32ecf0800000000000000
+      internalID: -224552924345505264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWhite2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 8
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f37e44b00b33b1710800000000000000
+      internalID: 1664981318439855935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWhite3
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 8
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5575bc5a837e8bf80800000000000000
+      internalID: -8090462500085344427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlayerWhite4
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 8
+        width: 10
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0815853c3d905580800000000000000
+      internalID: -8840393186606770165
       vertices: []
       indices: 
       edges: []
